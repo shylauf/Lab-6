@@ -14,9 +14,9 @@ def encode(password):
 
     return encoded_pass
 
-def decode(encoded_passkey):
+def decode(encoded_pass):
     decoded = ""
-    for digit in encoded_passkey:
+    for digit in encoded_pass:
         decoded += str((int(digit) - 3) % 10)
     return decoded
 
@@ -44,8 +44,8 @@ if __name__ == '__main__':
 
         # Decodes and prints both passwords (encoded & decoded).
         elif option == 2:
-            decoded = decode(encoded)
-            print(f"The encoded password is {encoded}, and the original password is {decoded}")
+            decoded = decode(password)
+            print(f"The encoded password is {password}, and the original password is {decoded}")
             print()
 
         # Exits the program
